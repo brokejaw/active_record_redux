@@ -15,10 +15,10 @@ class SQLObject
 
   def self.finalize!
     self.columns.each do |name|
+      
       define_method(name) do
         self.attributes[name]
       end
-      
       define_method("#{name}=") do |value|
         self.attributes[name] = value
       end
