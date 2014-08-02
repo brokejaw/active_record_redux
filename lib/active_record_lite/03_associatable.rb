@@ -42,7 +42,7 @@ module Associatable
   # Phase IVb
   def belongs_to(name, options = {})
     
-    options = BelongsToOptions.new(name, )
+    options = BelongsToOptions.new(name, options)
   end
 
   def has_many(name, options = {})
